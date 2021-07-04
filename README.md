@@ -18,6 +18,6 @@ Resources
 Prototype can be found here in Figma
 License
 
-Copyright © 2021 Dhanushka Chandimal All rights reserved.
+Copyright © 2021 Prasad Viduranga All rights reserved.
 
 Licensed under the MIT license
