@@ -1,0 +1,6 @@
+.button:hover, .button:focused{
+    -fx-background-color: #ffa9a9;
+    -fx-border-color: #ff760f;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+}
