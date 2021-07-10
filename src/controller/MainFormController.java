@@ -24,6 +24,10 @@ public class MainFormController {
     public ImageView imgMinimize;
     public ImageView imgClose;
     public Label lblTitle;
+    public ImageView imgMinimize1;
+    public ImageView imgMinimize11;
+    public ImageView imgMinimize111;
+    public ImageView imgMinimize112;
 
     public void initialize() {
 
@@ -31,58 +35,58 @@ public class MainFormController {
 
     public void btnReports_OnAction(ActionEvent actionEvent) throws IOException {
         String url = "../views/ReportsForm.fxml";
-        navigate(url);
+        navigate(url,"Reports");
     }
 
     public void btnAddNewPayment_OnAction(ActionEvent actionEvent) throws IOException {
         String url = "../views/AddNewPaymentForm.fxml";
-        navigate(url);
+        navigate(url,"Add New Payment");
     }
 
     public void btnManageUsers_OnAction(ActionEvent actionEvent) throws IOException {
         String url = "../views/ManageUserForm.fxml";
-        navigate(url);
+        navigate(url,"Manage User");
     }
 
     public void btnDashboard_OnAction(ActionEvent actionEvent) throws IOException {
         String url = "../views/DashboardForm.fxml";
-        navigate(url);
+        navigate(url,"DashBoard");
     }
 
     public void btnManageUser_OnKeyPress(KeyEvent keyEvent) throws IOException {
         if ((keyEvent.getCode() == KeyCode.getKeyCode("Enter")) || (keyEvent.getCode() == KeyCode.getKeyCode("Space"))) {
             String url = "../views/ManageUserForm.fxml";
-            navigate(url);
+            navigate(url,"Manage Users");
         }
     }
 
     public void btnAddNewPayment_OnKeyPress(KeyEvent keyEvent) throws IOException {
         if ((keyEvent.getCode() == KeyCode.getKeyCode("Enter")) || (keyEvent.getCode() == KeyCode.getKeyCode("Space"))) {
             String url = "../views/AddNewPaymentForm.fxml";
-            navigate(url);
+            navigate(url,"Add New Payment");
         }
     }
 
     public void btnReports_OnKeyPress(KeyEvent keyEvent) throws IOException {
         if ((keyEvent.getCode() == KeyCode.getKeyCode("Enter")) || (keyEvent.getCode() == KeyCode.getKeyCode("Space"))) {
             String url = "../views/ReportsForm.fxml";
-            navigate(url);
+            navigate(url,"Reports");
         }
     }
 
     public void btnDashboard_OnKeyPress(KeyEvent keyEvent) throws IOException {
         if ((keyEvent.getCode() == KeyCode.getKeyCode("Enter")) || (keyEvent.getCode() == KeyCode.getKeyCode("Space"))) {
             String url = "../views/DashboardForm.fxml";
-            navigate(url);
+            navigate(url,"Dashboard");
         }
     }
 
-    public void navigate(String url) throws IOException {
+    public void navigate(String url,String title) throws IOException {
         Stage stage = (Stage) contextOfMainForm.getScene().getWindow();
         Parent root = FXMLLoader.load(this.getClass().getResource(url));
         Scene dashboard = new Scene(root);
         stage.setScene(dashboard);
-        stage.setTitle("DashBoard");
+        stage.setTitle(title);
         stage.setResizable(false);
         stage.show();
     }

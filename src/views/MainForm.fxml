@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="contextOfMainForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1370.0" style="-fx-background-color: rgba(0,0,0,0);" stylesheets="@css/MainFormStyle.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+<AnchorPane fx:id="contextOfMainForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1370.0" style="-fx-background-color: rgba(0,0,0,0);" stylesheets="@css/MainFormStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
    <children>
       <AnchorPane prefHeight="780.0" prefWidth="1370.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="65.0">
          <children>
@@ -46,22 +46,22 @@
       </AnchorPane>
       <AnchorPane id="app-bar" layoutX="1.0" opacity="0.88" prefHeight="50.0" prefWidth="1370.0" style="-fx-background-color: #6200EE;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label id="title" fx:id="lblTitle" alignment="CENTER" layoutX="30.0" layoutY="12.0" prefHeight="56.0" prefWidth="1288.0" text="Label" textAlignment="CENTER" textFill="WHITE">
+            <Label id="title" fx:id="lblTitle" layoutX="76.0" layoutY="6.0" prefHeight="56.0" prefWidth="1245.0" text="Label" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="30.0" />
                </font>
             </Label>
-            <ImageView fx:id="imgClose" fitHeight="24.0" fitWidth="24.0" layoutX="1304.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgClose" fitHeight="24.0" fitWidth="24.0" layoutX="1315.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../student-management-system/src/view/assets/icons/close.png" />
+                  <Image url="@asserts/icons/close_24px.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
             </ImageView>
-            <ImageView fx:id="imgMinimize" fitHeight="24.0" fitWidth="24.0" layoutX="1253.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgMinimize" fitHeight="24.0" fitWidth="24.0" layoutX="1245.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../student-management-system/src/view/assets/icons/minimize.png" />
+                  <Image url="@asserts/icons/log-out.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -70,6 +70,38 @@
             <ImageView fx:id="imgNav" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" visible="false">
                <image>
                   <Image url="@../../../student-management-system/src/view/assets/icons/home.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgMinimize1" fitHeight="24.0" fitWidth="24.0" layoutX="1282.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@asserts/icons/minimize.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgMinimize11" fitHeight="24.0" fitWidth="24.0" layoutX="1199.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@asserts/icons/Trailing%20icon%201.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgMinimize111" fitHeight="65.0" fitWidth="60.0" layoutX="638.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@asserts/icons/Avatar.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="imgMinimize112" fitHeight="24.0" fitWidth="24.0" layoutX="30.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@asserts/icons/Leading%20Icon%20l%20Use%20High%20Emphasis.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
