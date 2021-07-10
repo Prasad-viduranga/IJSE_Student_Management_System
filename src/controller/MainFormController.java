@@ -12,7 +12,7 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
+import javafx.stage.Window;
 import java.io.IOException;
 
 public class MainFormController {
@@ -27,8 +27,24 @@ public class MainFormController {
     public ImageView imgNotifications;
     public ImageView imgMenu;
     public ImageView img_Minimize;
+    public ImageView imgMinimize;
+    public AnchorPane pneAppBar;
+    private double xpos;
+    private double ypos;
 
     public void initialize() {
+        lblTitle.setText("IJSE Student Management System.");
+        pneAppBar.setOnMousePressed(event -> {
+            xpos=event.getX();
+            ypos=event.getY();
+        });
+
+        pneAppBar.setOnMouseDragged(event -> {
+            Window mainWindow = imgClose.getScene().getWindow();
+            mainWindow.setX(event.getScreenX()-xpos);
+            mainWindow.setY(event.getScreenY()-ypos);
+        });
+
         imgClose.setOnMouseEntered(event -> imgClose.setImage(new Image("views/asserts/icons/hovers/close_hover.png")));
         imgClose.setOnMouseExited(event -> imgClose.setImage(new Image("views/asserts/icons/close.png")));
 
@@ -38,11 +54,11 @@ public class MainFormController {
         imgLogOut.setOnMouseEntered(event -> imgLogOut.setImage(new Image("views/asserts/icons/hovers/log-out_hover.png")));
         imgLogOut.setOnMouseExited(event -> imgLogOut.setImage(new Image("views/asserts/icons/log-out.png")));
 
-        imgNotifications.setOnMouseEntered(event -> imgNotifications.setImage(new Image("views/asserts/icons/hovers/Trailing icon 2.png")));
-        imgNotifications.setOnMouseExited(event -> imgNotifications.setImage(new Image("views/asserts/icons/Trailing icon 1.png")));
+        imgNotifications.setOnMouseEntered(event -> imgNotifications.setImage(new Image("views/asserts/icons/hovers/Trailing.png")));
+        imgNotifications.setOnMouseExited(event -> imgNotifications.setImage(new Image("views/asserts/icons/Trailing.png")));
 
-        imgClose.setOnMouseReleased(event -> ((Stage)(imgClose.getScene().getWindow())).close());
-        img_Minimize.setOnMouseReleased(event -> ((Stage)(img_Minimize.getScene().getWindow())).setIconified(true));
+        imgClose.setOnMouseReleased(event -> ((Stage) (imgClose.getScene().getWindow())).close());
+        img_Minimize.setOnMouseReleased(event -> ((Stage) (img_Minimize.getScene().getWindow())).setIconified(true));
 
     }
 
@@ -99,7 +115,7 @@ public class MainFormController {
         Parent root = FXMLLoader.load(this.getClass().getResource(url));
         Scene dashboard = new Scene(root);
         stage.setScene(dashboard);
-        stage.setTitle(title);
+        lblTitle.setText(title);
         stage.setResizable(false);
         stage.show();
     }

@@ -14,7 +14,7 @@ public class AppInitializer extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("../views/MainForm.fxml"));
-        primaryStage.setTitle("Hello World");
+
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setScene(new Scene(root));
         primaryStage.setResizable(false);
