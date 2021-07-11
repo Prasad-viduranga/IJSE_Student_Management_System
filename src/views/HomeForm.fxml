@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -8,35 +9,43 @@
 
 <AnchorPane fx:id="contextOfHomeForm" prefHeight="780.0" prefWidth="1370.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeFormController">
       <children>
-          <JFXButton fx:id="btnManageUsers" onAction="#btnManageUsers_OnAction" onKeyPressed="#btnManageUser_OnKeyPress" prefHeight="58.0" prefWidth="295.0" ripplerFill="#6200ee" stylesheets="@css/MainFormStyle.css" text="Manage Users" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="350.0">
-              <font>
-                  <Font size="24.0" />
-              </font>
-          </JFXButton>
-          <JFXButton fx:id="btnAddNewPayment" onAction="#btnAddNewPayment_OnAction" onKeyPressed="#btnAddNewPayment_OnKeyPress" prefHeight="58.0" prefWidth="295.0" ripplerFill="#6200ee" stylesheets="@css/MainFormStyle.css" text="Add New Payment " AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="275.0">
-              <font>
-                  <Font size="24.0" />
-              </font>
-          </JFXButton>
-          <JFXButton prefHeight="58.0" prefWidth="295.0" ripplerFill="#6200ee" stylesheets="@css/MainFormStyle.css" text="Subtitle 2" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="500.0">
-              <font>
-                  <Font size="24.0" />
-              </font>
-          </JFXButton>
-          <JFXButton fx:id="btnReports" onAction="#btnReports_OnAction" onKeyPressed="#btnReports_OnKeyPress" prefHeight="58.0" prefWidth="295.0" ripplerFill="#6200ee" stylesheets="@css/MainFormStyle.css" text="Reports" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="425.0">
-              <font>
-                  <Font size="24.0" />
-              </font>
-          </JFXButton>
-          <ImageView fitHeight="111.0" fitWidth="370.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="55.0">
+          <ImageView fitHeight="111.0" fitWidth="370.0" layoutY="44.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="44.0">
               <image>
                   <Image url="@asserts/ijse_logo.png" />
               </image>
           </ImageView>
-          <JFXButton fx:id="btnDashboard" onAction="#btnDashboard_OnAction" onKeyPressed="#btnDashboard_OnKeyPress" prefHeight="58.0" prefWidth="295.0" ripplerFill="#6200ee" stylesheets="@css/MainFormStyle.css" text="Dashboard" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="200.0">
-              <font>
-                  <Font size="24.0" />
-              </font>
-          </JFXButton>
+      <JFXDrawer layoutX="14.0" layoutY="181.0" prefHeight="560.0" prefWidth="335.0">
+         <children>
+            <AnchorPane>
+               <children>
+                      <JFXButton fx:id="btnManageUsers" focusTraversable="false" layoutY="150.0" onAction="#btnManageUsers_OnAction" onKeyPressed="#btnManageUser_OnKeyPress" prefHeight="58.0" prefWidth="295.0" ripplerFill="#6200ee" stylesheets="@css/MainFormStyle.css" text="Manage Users">
+                          <font>
+                              <Font size="24.0" />
+                          </font>
+                      </JFXButton>
+                      <JFXButton fx:id="btnAddNewPayment" focusTraversable="false" layoutY="75.0" onAction="#btnAddNewPayment_OnAction" onKeyPressed="#btnAddNewPayment_OnKeyPress" prefHeight="58.0" prefWidth="295.0" ripplerFill="#6200ee" stylesheets="@css/MainFormStyle.css" text="Add New Payment ">
+                          <font>
+                              <Font size="24.0" />
+                          </font>
+                      </JFXButton>
+                      <JFXButton focusTraversable="false" layoutY="300.0" prefHeight="58.0" prefWidth="295.0" ripplerFill="#6200ee" stylesheets="@css/MainFormStyle.css" text="Subtitle 2">
+                          <font>
+                              <Font size="24.0" />
+                          </font>
+                      </JFXButton>
+                      <JFXButton fx:id="btnReports" focusTraversable="false" layoutY="225.0" onAction="#btnReports_OnAction" onKeyPressed="#btnReports_OnKeyPress" prefHeight="58.0" prefWidth="295.0" ripplerFill="#6200ee" stylesheets="@css/MainFormStyle.css" text="Reports">
+                          <font>
+                              <Font size="24.0" />
+                          </font>
+                      </JFXButton>
+                      <JFXButton fx:id="btnDashboard" focusTraversable="false" onAction="#btnDashboard_OnAction" onKeyPressed="#btnDashboard_OnKeyPress" prefHeight="58.0" prefWidth="295.0" ripplerFill="#6200ee" stylesheets="@css/MainFormStyle.css" text="Dashboard">
+                          <font>
+                              <Font size="24.0" />
+                          </font>
+                      </JFXButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </JFXDrawer>
       </children>
   </AnchorPane>

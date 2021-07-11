@@ -5,6 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -26,25 +27,28 @@ public class MainFormController {
     public ImageView imgBack;
     private double xPos;
     private double yPos;
+    private final boolean btnBack_visibility = false;
 
-    public void initialize() throws IOException {
+    public void initialize() {
         initWindows();
+
 
     }
 
-    public void navigate(String url,String title) {
+    public void navigate(String url, String title,Boolean btnBack_visibility) {
         try {
             Parent load = FXMLLoader.load(this.getClass().getResource(url));
             pneStage.getChildren().clear();
             pneStage.getChildren().add(load);
             lblTitle.setText(title);
+            imgBack.setVisible(btnBack_visibility);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private void initWindows() {
+        imgBack.setVisible(false);
         lblTitle.setText("IJSE Student Management System");
         pneAppBar.setOnMousePressed(event -> {
             xPos = event.getX();
@@ -75,5 +79,9 @@ public class MainFormController {
         imgClose.setOnMouseReleased(event -> ((Stage) (imgClose.getScene().getWindow())).close());
         img_Minimize.setOnMouseReleased(event -> ((Stage) (img_Minimize.getScene().getWindow())).setIconified(true));
 
+    }
+
+    public void btnBackOnAction(MouseEvent mouseEvent) {
+        navigate("/views/HomeForm.fxml", "IJSE Student Management System",false);
     }
 }

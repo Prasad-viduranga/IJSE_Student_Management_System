@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -22,7 +23,7 @@ public class AppInitializer extends Application {
         MainFormController ctrl = fxmlLoader.getController();
 
         Scene scene = new Scene(root);
-        ctrl.navigate("/views/HomeForm.fxml","IJSE Student Management System");
+        ctrl.navigate("/views/HomeForm.fxml","IJSE Student Management System",false);
         scene.setUserData(ctrl);
         scene.setFill(Color.TRANSPARENT);
         primaryStage.initStyle(StageStyle.TRANSPARENT);
@@ -30,5 +31,6 @@ public class AppInitializer extends Application {
 
         primaryStage.setResizable(false);
         primaryStage.show();
+        System.out.println(Screen.getPrimary().getVisualBounds());
     }
 }

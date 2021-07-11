@@ -20,6 +20,9 @@ public class HomeFormController {
     public JFXButton btnReports;
     public AnchorPane contextOfHomeForm;
 
+    public void initialize(){
+
+    }
 
     public void btnReports_OnAction(ActionEvent actionEvent) throws IOException {
         String url = "../views/ReportsForm.fxml";
@@ -71,6 +74,6 @@ public class HomeFormController {
 
     private void navigate(String url, String title)   {
         MainFormController ctrl = (MainFormController) btnDashboard.getScene().getUserData();
-        ctrl.navigate(url,title);
+        ctrl.navigate(url,title,true);
     }
 }
