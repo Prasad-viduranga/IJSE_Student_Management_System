@@ -28,7 +28,7 @@
                   <Font size="24.0" />
               </font>
           </JFXButton>
-          <ImageView fitHeight="111.0" fitWidth="370.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="65.0">
+          <ImageView fitHeight="111.0" fitWidth="370.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="55.0">
               <image>
                   <Image url="@asserts/ijse_logo.png" />
               </image>

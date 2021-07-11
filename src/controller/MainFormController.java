@@ -1,11 +1,15 @@
 package controller;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+
+import java.io.IOException;
 
 public class MainFormController {
 
@@ -18,10 +22,26 @@ public class MainFormController {
     public ImageView img_Minimize;
     public ImageView imgMinimize;
     public AnchorPane pneAppBar;
+    public AnchorPane pneStage;
     private double xPos;
     private double yPos;
 
-    public void initialize() {
+    public void initialize() throws IOException {
+        initWindows();
+
+    }
+
+    public void navigate() {
+        try {
+            Parent load = FXMLLoader.load(this.getClass().getResource("../views/HomeForm.fxml"));
+            pneStage.getChildren().add(load);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    private void initWindows() {
         lblTitle.setText("IJSE Student Management System");
         pneAppBar.setOnMousePressed(event -> {
             xPos = event.getX();
@@ -50,6 +70,4 @@ public class MainFormController {
         img_Minimize.setOnMouseReleased(event -> ((Stage) (img_Minimize.getScene().getWindow())).setIconified(true));
 
     }
-
-
 }
