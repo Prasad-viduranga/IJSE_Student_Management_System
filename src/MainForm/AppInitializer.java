@@ -22,10 +22,12 @@ public class AppInitializer extends Application {
         MainFormController ctrl = fxmlLoader.getController();
 
         Scene scene = new Scene(root);
-        ctrl.navigate();
+        ctrl.navigate("/views/HomeForm.fxml","IJSE Student Management System");
+        scene.setUserData(ctrl);
         scene.setFill(Color.TRANSPARENT);
         primaryStage.initStyle(StageStyle.TRANSPARENT);
         primaryStage.setScene(scene);
+
         primaryStage.setResizable(false);
         primaryStage.show();
     }

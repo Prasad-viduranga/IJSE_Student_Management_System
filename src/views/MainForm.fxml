@@ -56,9 +56,9 @@
                <Cursor fx:constant="HAND" />
             </cursor>
          </ImageView>
-         <ImageView fx:id="imgMenu" fitHeight="24.0" fitWidth="24.0" layoutX="30.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fx:id="imgBack" fitHeight="24.0" fitWidth="24.0" layoutX="30.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
             <image>
-               <Image url="@asserts/icons/Leading%20Icon%20l%20Use%20High%20Emphasis.png" />
+               <Image url="@asserts/icons/back.png" />
             </image>
             <cursor>
                <Cursor fx:constant="HAND" />

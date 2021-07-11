@@ -23,6 +23,7 @@ public class MainFormController {
     public ImageView imgMinimize;
     public AnchorPane pneAppBar;
     public AnchorPane pneStage;
+    public ImageView imgBack;
     private double xPos;
     private double yPos;
 
@@ -31,10 +32,12 @@ public class MainFormController {
 
     }
 
-    public void navigate() {
+    public void navigate(String url,String title) {
         try {
-            Parent load = FXMLLoader.load(this.getClass().getResource("../views/HomeForm.fxml"));
+            Parent load = FXMLLoader.load(this.getClass().getResource(url));
+            pneStage.getChildren().clear();
             pneStage.getChildren().add(load);
+            lblTitle.setText(title);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -65,6 +68,9 @@ public class MainFormController {
 
         imgNotifications.setOnMouseEntered(event -> imgNotifications.setImage(new Image("views/asserts/icons/hovers/Trailing.png")));
         imgNotifications.setOnMouseExited(event -> imgNotifications.setImage(new Image("views/asserts/icons/Trailing.png")));
+
+        imgBack.setOnMouseEntered(event -> imgBack.setImage(new Image("views/asserts/icons/hovers/back_hover.png")));
+        imgBack.setOnMouseExited(event -> imgBack.setImage(new Image("views/asserts/icons/back.png")));
 
         imgClose.setOnMouseReleased(event -> ((Stage) (imgClose.getScene().getWindow())).close());
         img_Minimize.setOnMouseReleased(event -> ((Stage) (img_Minimize.getScene().getWindow())).setIconified(true));

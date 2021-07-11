@@ -69,13 +69,8 @@ public class HomeFormController {
         }
     }
 
-    public void navigate(String url, String title) throws IOException {
-        Stage stage = (Stage) contextOfHomeForm.getScene().getWindow();
-        Parent root = FXMLLoader.load(this.getClass().getResource(url));
-        Scene dashboard = new Scene(root);
-        stage.setScene(dashboard);
-        //lblTitle.setText(title);
-        stage.setResizable(false);
-        stage.show();
+    private void navigate(String url, String title)   {
+        MainFormController ctrl = (MainFormController) btnDashboard.getScene().getUserData();
+        ctrl.navigate(url,title);
     }
 }
